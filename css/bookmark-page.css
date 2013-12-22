@@ -1,0 +1,8 @@
+/* Stylesheet for bookmark pages */
+a.bookmark-box
+{
+width:100px;
+padding:5px;
+border:2px double green;
+margin:5px;
+}
