@@ -3,12 +3,21 @@ p.bookmark-box
 {
 line-height:250%
 }
-a.bookmark-box
+p.bookmark-box a
 {
 color:#000000;
+background-color:#FFFFFF;
 text-decoration:none;
 /*width:100px; */
 padding:2px 1em;
-border:4px double green;
+border-style:solid;
+border-width:4px;
+border-radius:8px;
+border-color:#00AA00;
 margin:5px;
+}
+p.bookmark-box a:hover
+{
+color:#000000;
+background-color:#AAFFAA;
 }
