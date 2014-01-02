@@ -10,18 +10,44 @@
 <html>
 <body>
   <nav>
-    <a title="Go Back to this Site's Main Page " href="../../../index.html">Main</a> ⬬ 
-    <a title="Go to the Root Node of the Link Tree" href="../../index.html">Root</a> ⬬ 
     <a title="Go up to Computing and IT Links" href="../index.html">IT</a>
-  <h1 title="Python Links">Python Links</h1>
+    <a title="Go to the Root Node of the Link Tree" href="../index.html">Root</a>
+    <a title="Go Back to this Site's Main Page " href="../../index.html">Home</a>
+  </nav>
+  <h1 title="Python Links">Links</h1>
   <p class="bookmark-box">
     <a title="Python's Official Page" href="http://www.python.org/">Home</a>
     <a title="PyPI, the Python Package Index" href="https://pypi.python.org/pypi">PyPI</a>
     <a title="IPython Notebook Viewer, a cool way to share Python code" href="http://nbviewer.ipython.org/">Notebooks</a>
     <a title="Python Recipes from Active State" href="http://code.activestate.com/recipes/langs/python/">Recipes</a>
+    <a title="Python at StackOverflow" href="http://stackoverflow.com/questions/tagged/python">Stack</a>
+    <a title="comp.lang.python" href="https://groups.google.com/forum/#!forum/comp.lang.python">GG</a>
+    <a title="effbot, Fredrik Lundth's Python Collection" href="http://effbot.org/">effbot</a>
+  </p>
+  <h2 title="Python Books Free Online">Online Books</h2>
+  <p class="bookmark-box">
+    <a title="Dive Into Python 3, by Mark Pilgrim" href="http://getpython3.com/diveintopython3/">Dive</a>
+    <a title="How to Think Like a Computer Scientist, by Downey, Elkner and Meyers" href="http://www.greenteapress.com/thinkpython/thinkCSpy/html/">Think</a>
+    <a title="Learn Python the Hard Way, by Zed. A. Shaw" href="http://learnpythonthehardway.org/book/">Hard Way</a>
+    <a title="Python Cookbook, by David Beazley" href="http://chimera.labs.oreilly.com/books/1230000000393/index.html">Cookbook</a>
+    <a title="Natural Language Processing with Python, analyzing text with the Natural Language Toolkit, by Bird, Klein and Loper" href="http://nltk.org/book/">NLTK</a>
   </p>
   <h1 title="Python Notes, Tips and Tricks">Python Notes</h1>
+  <h2 title="Achieve a Clean Reload of Modified Code in the Python Interpreter">Clean Code Reload</h2>
   <p>
+    Code <var>import</var>ed into a Python IDE runs as if unmodified
+    in that session when the source code has been changed.  This
+    behavior results because the interpreter uses the byte compiled
+    code without revisiting the source.  I find this behavior to be an
+    impediment to Python's generally rapid development cycle and was
+    glad to see a good discussion of this issue and its solutions in
+    "Learning Python" by Mark Lutz.
+  </p>
+  <p>
+    The conventional solution to this difficulty is to
+    follow <var>import</var> statements with <var>reload</var>s to
+    ensure that the environment picks up source changes subsequent to
+    the initial import.
   </p>
 </body>
 </html>
