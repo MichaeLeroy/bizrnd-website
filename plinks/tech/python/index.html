@@ -6,6 +6,7 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
   <link rel="stylesheet" type="text/css" href="../../../css/bookmark-page.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/pygments.css">
 </head>
 <html>
 <body>
@@ -33,21 +34,16 @@
     <a title="Natural Language Processing with Python, analyzing text with the Natural Language Toolkit, by Bird, Klein and Loper" href="http://nltk.org/book/">NLTK</a>
   </p>
   <h1 title="Python Notes, Tips and Tricks">Python Notes</h1>
-  <h2 title="Achieve a Clean Reload of Modified Code in the Python Interpreter">Clean Code Reload</h2>
+  <h2 title="Achieve a Clean Reload of Modified Code in the Python Interpreter">exec as an alternative to import and reload</h2>
+<div class="highlight"><pre><span class="c"># Use exec to avoid the pitfalls of import and reload when developing</span>
+<span class="c"># modules using the interpreter</span>
+
+  <span class="k">exec</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;my_module.py&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
   <p>
-    Code <var>import</var>ed into a Python IDE runs as if unmodified
-    in that session when the source code has been changed.  This
-    behavior results because the interpreter uses the byte compiled
-    code without revisiting the source.  I find this behavior to be an
-    impediment to Python's generally rapid development cycle and was
-    glad to see a good discussion of this issue and its solutions in
-    "Learning Python" by Mark Lutz.
-  </p>
-  <p>
-    The conventional solution to this difficulty is to
-    follow <var>import</var> statements with <var>reload</var>s to
-    ensure that the environment picks up source changes subsequent to
-    the initial import.
+    Note that using <var>exec</var> in this manner bypasses the
+    namespace encapsulation that one gets when using the more
+    conventional <var>import</var> and <var>reload</var> paradigm.
   </p>
 </body>
 </html>
