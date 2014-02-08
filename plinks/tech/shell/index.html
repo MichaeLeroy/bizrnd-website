@@ -14,9 +14,69 @@
     <a title="Go to the Root Node of the Link Tree" href="../../index.html">Root</a>
     <a title="Go Back to this Site's Main Page " href="../../../index.html">Home</a>
   </nav>
+  <p>
+    I typically use Bash, so most of the content on this page is for
+    that shell.
+  </p>
   <h1 title="Shell Links">Links</h1>
   <p class="bookmark-box">
     <a title="Advanced Bash Scripting Guide" href="http://tldp.org/LDP/abs/html/">ABS</a>
+    <a title="Bash at StackOverflow" href="https://stackoverflow.com/questions/tagged/shell">Stack</a>
+  </p>
+  <h1 title="Bash Shell Notes, Tips and Tricks">Bash Notes</h1>
+  <h2 title="Initialization Files, which ones to use for what">Which Initialization File?</h2>
+  <p>
+    Which of the several shell initialization files should one use to
+    setup a customized environment?  It's a question that I have to
+    ask when I do such work, so I'll answer it here for easy
+    reference.  There are several reasons for the diversity of these
+    configuration files.  One is that there are, in typical unix
+    style, system-wide files that provide default configurations as
+    well as per-user files for individualized customization.  Another
+    reason is more subtle; Bash may be launched as either login or
+    non-login and as either interactive or non-interactive.  Bash's
+    configuration process depends upon its invocation according to
+    these two properties.  There are some additional factors, such as
+    startup in posix mode or when the effective user or group differs
+    from the real user or group, which I'll not consider here.
+  </p>
+  <p>
+    Non-login, non-interactive, bash sessions are spawned to process
+    scripts.  Unless otherwise setup, these sessions inherit their
+    environment from their parent environment.
+  </p>
+  <p>
+    Login sessions look first to <var>/etc/profile</var>, which serves
+    as a site default.  Once this file is processed, the first
+    available of the following user-specific files are processed for
+    configuration: <var>~/.bash_profile</var>, <var>~/.bash_login</var>,
+    and <var>~/.profile</var>.  (Though it seems that a login bash
+    session should be interactive, it is possible to invoke a
+    non-interactive shell as if it is a login session.  These
+    non-interactive, login, sessions have the same configuration rules
+    as a standard login session.)  Upon exit, a login shell will
+    invoke <var>~/.bash_logout</var>, if it is available.
+  </p>
+  <p>
+    Non-login, interactive, sessions turn sequentially to their site
+    and user configuration files, <var>/etc/bash.bashrc</var>
+    and <var>~/.bashrc</var>, respectively.  But what is a non-login,
+    interactive, session?  Terminal programs
+    (e.g. <var>konsole</var>, <var>xterm</var>, <var>quake</var>)
+    within graphical environments provide non-login, interactive
+    shells.  So most users, most of the time, will be experiencing
+    bash in this way, which means that most bash customization aimed
+    at creating a comfortable user environment should go
+    into <var>~/.bashrc</var>.
+  </p>
+  <p>
+    I drew upon several sources for this section: 
+    <a title="The Bash Beginners Guide, Individual user configuration files"
+    href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_01.html">Bash
+    Beginners Guide</a>, the <var>bash(1)</var> manpage,
+    <a title="Beyond Linux from Scratch Documentation, The Bash Shell Startup Files"
+    href="http://www.linuxfromscratch.org/blfs/view/cvs/postlfs/profile.html">the BLFS Documentation</a>, and 
+    <a title="GNU's Bash Manual, Bash Startup Files" href="https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html">The GNU Bash Manual</a>
   </p>
 </body>
 </html>

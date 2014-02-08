@@ -1,4 +1,8 @@
 /* Stylesheet for bookmark pages */
+dl.code dt
+{
+font-family: "monospace"
+}
 p.bookmark-box
 {
 line-height:250%
