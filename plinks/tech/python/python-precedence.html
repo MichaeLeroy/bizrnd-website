@@ -23,11 +23,14 @@
     <a title="Learning Python, Table 5.2" href="http://www.rmi.net/~lutz/about-lp5e.html">Learning Python</a>.  This table was created for the 3.x branch of Python, but is probably largely applicable to 2.x Python.
   </p>
   <table>
+    <thead>
     <tr>
       <th>Operator</th>
       <th>Description</th>
       <th>Associativity</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
       <td><code>lambda</code></td>
       <td>Anonymous Function Definition</td>
@@ -54,8 +57,8 @@
       <td>Unary, Left to Right</td>
     </tr>
     <tr>
-      <td><code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
-      <td>Membership, Identity, Logical Comparisons</td>
+      <td><code>in</code>, <code>not in</code> ◾ <code>is</code>, <code>is not</code> ◾ <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
+      <td>Membership ◾ Identity ◾ Logical Comparisons</td>
       <td>Chained Left to Right</td>
     </tr>
     <tr>
@@ -75,39 +78,40 @@
     </tr>
     <tr>
       <td><code>&lt;&lt;</code>, <code>&gt;&gt;</code></td>
-      <td>Bitshift</td>
+      <td>Bitshifts</td>
       <td>Left to Right</td>
     </tr>
     <tr>
-      <td><code>+</code>, <code>-</code></td>
-      <td>Addition and Concatenation, Subtraction and Set Difference</td>
+      <td><code>+</code> ◾ <code>-</code></td>
+      <td>Addition and Concatenation ◾ Subtraction and Set Difference</td>
       <td>Left to Right</td>
     </tr>
     <tr>
-      <td><code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></td>
-      <td>Multiplication and Repeat, True Division, Floor Division, Remainder and Format</td>
+      <td><code>*</code> ◾ <code>/</code> ◾ <code>//</code> ◾ <code>%</code></td>
+      <td>Multiplication and Repeat ◾ True Division ◾ Floor Division ◾ Remainder and Format</td>
       <td>Left to Right</td>
     </tr>
     <tr>
-      <td><code>+</code>, <code>-</code>, <code>~</code></td>
-      <td>Positive, Negative and Bitwise Not</td>
+      <td><code>+</code> ◾ <code>-</code> ◾ <code>~</code></td>
+      <td>Positive ◾ Negative ◾ Bitwise Not</td>
       <td>Unary, Left to Right</td>
     </tr>
     <tr>
       <td><code>**</code></td>
       <td>Exponentiation</td>
-      <td>Right to Left (but less bound than a unary +, - or ~ to immediate right)</td>
+      <td>Right to Left (but less bound than a unary +, - or ~ to its immediate right)</td>
     </tr>
     <tr>
-      <td><code>[]</code>, <code>[:]</code>, <code>()</code>, <code>.</code></td>
-      <td>Subscription, Slicing, Call, Attribute Reference</td>
+      <td><code>[]</code> ◾ <code>[:]</code> ◾ <code>()</code> ◾ <code>.</code></td>
+      <td>Subscription ◾ Slice ◾ Call ◾ Attribute Reference</td>
       <td>Left to Right</td>
     </tr>
     <tr>
-      <td><code>()</code>, <code>[]</code>, <code>{}</code></td>
-      <td>Binding and Tuple and Generator, List Display and Comprehension, Dictionary and Set Display and Comprehension</td>
+      <td><code>()</code> ◾ <code>[]</code> ◾ <code>{}</code></td>
+      <td>Binding, Tuple Display and Generator ◾ List Display and Comprehension ◾ Dictionary and Set Display and Comprehension</td>
       <td>Left to Right</td>
     </tr>
+    </tbody>
   </table>
 </body>
 </html>

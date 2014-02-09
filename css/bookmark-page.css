@@ -1,8 +1,6 @@
 /* Stylesheet for bookmark pages */
-dl.code dt
-{
-font-family: "monospace"
-}
+
+/* Make button-like links for groups of bookmarks */
 p.bookmark-box
 {
 line-height:250%
@@ -25,6 +23,8 @@ p.bookmark-box a:hover
 color:#000000;
 background-color:#AAFFAA;
 }
+
+/* Similar treatent, but different color, for internal navigation links */
 nav
 {
 line-height:250%
@@ -46,4 +46,20 @@ nav a:hover
 {
 color:#000000;
 background-color:#AAAAFF;
+}
+
+/* Treat dictionary items of in a list of code as code terms */
+dl.code dt
+{
+font-family: "monospace"
+}
+
+/* Tune table formatting */
+table
+{
+padding: 5px;
+}
+tbody tr:hover
+{
+background-color:#CCCCFF;
 }
