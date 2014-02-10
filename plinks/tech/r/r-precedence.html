@@ -1,0 +1,121 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <title>R Operators and Precedence</title>
+  <meta name="author" content="Mike Satteson">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="stylesheet" type="text/css" href="../../../css/bookmark-page.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/pygments.css">
+</head>
+<html>
+<body>
+  <nav>
+    <a title="Go back to R Links" href="index.html">R</a>
+    <a title="Go up to Computing and IT Links" href="../index.html">IT</a>
+    <a title="Go to the Root Node of the Link Tree" href="../../index.html">Root</a>
+    <a title="Go Back to this Site's Main Page " href="../../../index.html">Home</a>
+  </nav>
+  <p>
+    R operators presented in order of increasing precedence;
+    later entries bind more tightly than the earlier ones.  
+    The sources for this table are The R language definition (<a title="3.1.4 Operators" href="http://cran.r-project.org/doc/manuals/r-release/R-lang.html#Operators">operators</a> and <a title="10.4.2 Infix and prefix operators" href="http://cran.r-project.org/doc/manuals/r-release/R-lang.html#Infix-and-prefix-operators">infix and prefix operators</a>) and <a title="The Syntax entry in the base manual" href="http://stat.ethz.ch/R-manual/R-patched/library/base/html/Syntax.html">Syntax {base}</a>.
+  </p>
+  <table>
+    <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Associativity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>?</code></td>
+      <td>Help</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>=</code></td>
+      <td>Assignment (Argument List)</td>
+      <td>Right to Left</td>
+    </tr>
+    <tr>
+      <td><code>&lt;-</code>, <code>&lt;&lt;-</code></td>
+      <td>Assignment</td>
+      <td>Right to Left</td>
+    </tr>
+    <tr>
+      <td><code>-&gt;</code>, <code>-&gt;&gt;</code></td>
+      <td>Rightward Assignment</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>~</code></td>
+      <td>Model Formula Specification</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>|</code> ◾ <code>||</code></td>
+      <td>Vectorized Or ◾ Single Valued Or (Short Circuits)</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>&amp;</code> ◾ <code>&amp;&amp;</code></td>
+      <td>Vectorized And ◾ Single Valued And (Short Circuits)</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
+      <td>Logical Comparisons</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>+</code> ◾ <code>-</code></td>
+      <td>Addition ◾ Subtraction</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>*</code> ◾ <code>/</code></td>
+      <td>Multiplication ◾ Division</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>%</code><variable>op</variable><code>%</code></td>
+      <td>Special Operators</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>:</code></td>
+      <td>Sequence Generator</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>+</code> ◾ <code>-</code></td>
+      <td>Positive ◾ Negative</td>
+      <td>Unary, Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>^</code></td>
+      <td>Exponentiation</td>
+      <td>Right to Left</td>
+    </tr>
+    <tr>
+      <td><code>[</code>, <code>[[</code></td>
+      <td>Indexing</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>$</code> ◾ <code>@</code></td>
+      <td>Component Extraction (variable) ◾ Slot Extraction (object)</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>::</code>, <code>:::</code></td>
+      <td>Access Variables Through Namespaces</td>
+      <td>Left to Right</td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
