@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Octave Operators and Precedence</title>
+  <meta name="author" content="Mike Satteson">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="stylesheet" type="text/css" href="../../../css/bookmark-page.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/pygments.css">
+</head>
+<body>
+  <nav>
+    <a title="Go back to Octave Links" href="index.html">Octave</a>
+    <a title="Go up to Computing and IT Links" href="../index.html">IT</a>
+    <a title="Go to the Root Node of the Link Tree" href="../../index.html">Root</a>
+    <a title="Go Back to this Site's Main Page " href="../../../index.html">Home</a>
+  </nav>
+  <p>
+    Octave operators presented in order of increasing precedence;
+    later entries bind more tightly than the earlier ones.  The source
+    for this page is: <a title="Octave Language Documentation,
+    Operator Precedence"
+    href="https://www.gnu.org/software/octave/doc/interpreter/Operator-Precedence.html">the
+    language reference</a>.
+  </p>
+  <table>
+    <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Associativity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>= += -= *= /= \= ^= .*= ./= .\= .^= |= &= </code></td>
+      <td>Assignment</td>
+      <td>Right to Left</td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>Logical Or</td>
+      <td>Left to Right, Short Circuits</td>
+    </tr>
+    <tr>
+      <td><code>&&</code></td>
+      <td>Logical And</td>
+      <td>Left to Right, Short Circuits</td>
+    </tr>
+    <tr>
+      <td><code>|</code></td>
+      <td>Element-wise Or</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>&&</code></td>
+      <td>Element-wise And</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>< <= == >= > != ~=</code></td>
+      <td>Logical Comparison</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>: ::</code></td>
+      <td>Slicing and Vector Generation</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>+ -</code></td>
+      <td>Addition and Subtraction</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>* / \ .* ./ .\</code></td>
+      <td>Multiplication and Division</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>+ -</code> ◾ <code>++ --</code> ◾ <code>~ !</code></td>
+      <td>Uniary Plus and Minus ◾ Prefix Increment and Decreent ◾ Logical Negation</td>
+      <td>Left to Right, Uniary</td>
+    </tr>
+    <tr>
+      <td><code>' .' ^ ** .^ .**</code></td>
+      <td>Transposition and Exponentiation</td>
+      <td>Left to Right</td>
+    </tr>
+    <tr>
+      <td><code>++ --</code></td>
+      <td>Postfix Increment and Decrement</td>
+      <td>Right to Left</td>
+    </tr>
+    <tr>
+      <td><code>()</code> ◾ <code>{}</code> ◾ <code>.</code></td>
+      <td>Function Call ◾ Array Indexing ◾ Structure Indexing</td>
+      <td>Left to Right</td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
